@@ -30,9 +30,9 @@ task_name:"$tasksDocs.task_name"
 
 db.octoberSession.aggregate([{$match:{$expr:{$eq:[{$month:{$dateFromString:{dateString:"$Date", format:"%Y-%m-%d"}}},10]}}}])
 
-2.	Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+2.	Find all the company drives which appeared between 15 oct-2024 and 31-oct-2024
 
-db.company_drives.find({Date:{$gte:"2020-10-15",$lte:"2020-10-31"}})
+db.company_drives.find({Date:{$gte:"2024-10-15",$lte:"2024-10-31"}})
 
 3.	Find all the company drives and students who are appeared for the placement.
 
@@ -86,7 +86,7 @@ db.attendance.aggregate([
 {
 	$match:{
 		Date:{
-			$gte:"2020-10-15", $lte:"2020-10-31"
+			$gte:"2024-10-15", $lte:"2024-10-31"
 },
 		Status:"Absent"
 		}
